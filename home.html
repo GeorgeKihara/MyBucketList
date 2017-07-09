@@ -1,0 +1,116 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MyBucket</title>
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link rel="stylesheet" href="css/my.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+</head>
+
+<body ng-app="homeApp" ng-controller="goalCtrl">
+    <p id="welcome">Welcome {{usr}} to your bucket list.</p>
+
+    <div style="background:floralwhite;" id="header">
+        <div class="area">
+            <div>
+                <a href="index.html" target>
+                    <img id="book" src="images/book.jpeg">
+                </a>
+                <a href="index.html" target>
+                    <img id="book1" src="images/book.jpeg">
+                </a>
+            </div>
+            <div id="title">
+                <u>MyBucket List</u>
+            </div>
+
+            <ul id="navigation">
+                <li class="selected">
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="#">Help</a>
+                </li>
+                <li>
+                    <a href="index.html">Sign out</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+    <!-- The bucket list -->
+    <div id="content">
+        <div class="bucket">
+            <form name="goalie" method="post">
+                <input id="goal" name="details" ng-model="list" type="text" value="" placeholder="What do u wish to do?" required/>
+                <button type="submit" ng-click="submitForm()" id="btn-tick"></button>
+            </form>
+            <header>
+                Your Bucket List
+            </header>
+            <div id="scroll">
+                <div id="one">
+                    <label>1.{{one}}</label>
+                </div>
+                <p><button ng-click="edit1()" id="edit"></button> <button ng-click="delete1()" id="delete"></button></p>
+                <div id="two">
+                    <label>2.{{two}}</label>
+                </div>
+                <p><button ng-click="edit2()" id="edit"></button> <button ng-click="delete2()" id="delete"></button></p>
+                <div id="three">
+                    <label>3.{{three}}</label>
+                </div>
+                <p><button ng-click="edit3()" id="edit"></button> <button ng-click="delete3()" id="delete"></button></p>
+                <div id="four">
+                    <label>4.{{four}}</label>
+                </div>
+                <p><button ng-click="edit4()" id="edit"></button> <button ng-click="delete4()" id="delete"></button></p>
+                <div id="five">
+                    <label>5.{{five}}</label>
+                </div>
+                <p><button ng-click="edit5()" id="edit"></button> <button ng-click="delete5()" id="delete"></button></p>
+                <div id="six">
+                    <label>6.{{six}}</label>
+                </div>
+                <p><button ng-click="edit6()" id="edit"></button> <button ng-click="delete6()" id="delete"></button></p>
+                <div id="seven">
+                    <label>7.{{seven}}</label>
+                </div>
+                <p><button ng-click="edit7()" id="edit"></button> <button ng-click="delete7()" id="delete"></button></p>
+                <div id="eight">
+                    <label>8.{{eight}}</label>
+                </div>
+                <p><button ng-click="edit8()" id="edit"></button> <button ng-click="delete8()" id="delete"></button></p>
+                <div id="nine">
+                    <label>9.{{nine}}</label>
+                </div>
+                <p><button ng-click="edit9()" id="edit"></button> <button ng-click="delete9()" id="delete"></button></p>
+                <div id="ten">
+                    <label>10.{{ten}}</label>
+                </div>
+                <p><button ng-click="edit10()" id="edit"></button> <button ng-click="delete10()" id="delete"></button></p>
+            </div>
+        </div>
+    </div>
+    <div style="background:wheat;" id="footer">
+        <span class="divider"></span>
+        <div class="area">
+            <div id="connect">
+                <a href="" target="_blank" class="googleplus"></a>
+                <a href="" target="_blank" class="mail"></a>
+                <a href="" target="_blank" class="facebook"></a>
+                <a href="" target="_blank" class="twitter"></a>
+            </div>
+            <p id="copyright">
+                © 2017 MyBucket List. All Rights Reserved.
+                <br> Proudly powered by TUKLAB.
+            </p>
+        </div>
+    </div>
+    <script src="js/vanilla.js"></script>
+    <script src="js/angular.js"></script>
+</body>
+
+</html>

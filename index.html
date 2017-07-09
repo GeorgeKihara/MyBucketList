@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>MyBucket</title>
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link rel="stylesheet" href="css/my.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+</head>
+
+<body>
+
+    <div style="background:floralwhite;" id="header">
+        <div class="area">
+            <div>
+                <a href="index.html" target>
+                    <img id="book" src="images/book.jpeg">
+                </a>
+                <a href="index.html" target>
+                    <img id="book1" src="images/book.jpeg">
+                </a>
+            </div>
+            <div id="title">
+                <u>MyBucket List</u>
+            </div>
+
+            <ul id="navigation">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li class="selected">
+                    <a id="lSignIn" onclick="show(); return false">Sign in</a>
+                </li>
+                <li>
+                    <a id="lSignUp" onclick="notShow(); return false" href="#">Sign up</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+    <div id="contents">
+        <!-- the Sign in and register forms -->
+        <div ng-app="validationApp" id="signIn" class="form">
+            <img src="images/smiling.png" />
+            <form name="bucket" ng-submit="submitForm()" action="home.html" ng-controller="formCtrl" method="post">
+                <div class="form-input">
+                    <b>Username: </b><input type="text" ng-minlength="5" ng-maxlength="10" name="username" placeholder="e.g. georgie" ng-model="usr" required/>
+                </div>
+                <div class="form-input">
+                    <b>Password: </b><input type="password" ng-minlength="5" ng-maxlength="10" name="passwd" placeholder="*******" ng-model="passwd" required/>
+                </div>
+                <input type="submit" name="submit" value="SIGN IN" class="btn-sign">
+                <p></p>
+                <a href=""><u>Forgot password?</u></a><br>
+                <a onclick="notShow()" href="#"><u>Create an account?</u></a>
+            </form>
+        </div>
+        <div id="signUp" class="form1">
+            <img src="images/smiling.png" />
+            <form method="post" ng-app="myApp" ng-controller="formCtrl" name="bucketUp" action="index.html">
+                <div class="form-input">
+                    <b>Username: </b><input ng-minlength="5" ng-maxlength="10" type="text" name="username" placeholder="e.g. georgie" required/>
+                </div>
+                <div class="form-input">
+                    <b>Password: </b><input type="password" name="passwd" placeholder="*******" required/>
+                </div>
+                <div class="form-input">
+                    <big>Confirm password: </big><input ng-minlength="5" ng-maxlength="10" type="password" name="password" placeholder="*******" required/>
+                </div>
+                <input type="submit" name="submit" value="SIGN UP" class="btn-sign">
+                <p></p>
+                <a href=""><u>Already have an account?</u></a>
+            </form>
+        </div>
+
+    </div>
+
+    <div style="background:wheat;" id="footer">
+        <span class="divider"></span>
+        <div class="area">
+            <div id="connect">
+                <a href="gegohcomp@gmail.com" target="_blank" class="googleplus"></a>
+                <a href="" target="_blank" class="mail"></a>
+                <a href="www.facebook.com/georgiegegoh" target="_blank" class="facebook"></a>
+                <a href="www.twitter.com/georgiegegoh" target="_blank" class="twitter"></a>
+            </div>
+            <p id="copyright">
+                © 2017 MyBucket List. All Rights Reserved.
+                <br> Proudly powered by TUKLAB.
+            </p>
+        </div>
+    </div>
+    <script src="path/to/vanilla.js"></script>
+    <script src="js/vanilla.js"></script>
+    <script src="js/my.js"></script>
+    <script src="js/angular.js"></script>
+</body>
+
+</html>
