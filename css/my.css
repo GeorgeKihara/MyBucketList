@@ -1,5 +1,11 @@
-body {
-    background: grey;
+
+body #ent{
+    position: relative;
+    margin: 0 auto;
+    font-size: 30px;
+    color: black;
+    left: 30%; 
+    top: 20%;
 }
 #welcome{
     position: absolute;
@@ -175,11 +181,11 @@ a {
 }
 
 .bucket {
-    width: 600px;
-    height: 450px;
+    width: 700px;
+    height: 500px;
     text-align: center;
     background-color: lightseagreen;
-    margin-top: 200px;
+    margin-top: 20px;
     margin: 0 auto;
     border-radius: 10px;
     overflow: hidden;
@@ -231,7 +237,7 @@ a {
     margin-bottom: 2px;
     background-color: lightgray;
     padding-left: 3px;
-    border-radius: 4opx;
+    border-radius: 4px;
     border: none;
     text-align: left;
     margin-left: 10px;
@@ -303,8 +309,44 @@ a {
     overflow-x: hidden;
     color: black;
     font-size: 16px;
+    margin-bottom: 30px;
 }
 .area #copyright{
     position: relative;
     text-align: center;
+}
+
+/*about page*/
+.about{
+    width: 1000px;
+    height: 400px;
+    border: none;
+    text-align: left;
+    position: relative;
+    left: 15%;
+    background-color: lightslategrey;
+    font-size: 18px;
+}
+.about b{
+    position: relative;
+    font-size: 18px;
+    margin-bottom: 20px;
+    margin-top: 400px;
+    left: 2%;
+}
+.about p{
+    font-family: Georgia;
+    font-size: 19px;
+    margin-left: 4%;
+    color: black;
+    margin-top: 30px;
+    position: relative;
+    left: 20%;
+}
+.about li{
+    margin-top: 20px;
+    left: 4%;
+    margin-bottom: 20px;
+    font-family: Cambria;
+    font-size: 18px;
 }

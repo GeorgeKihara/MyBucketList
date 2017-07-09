@@ -173,10 +173,10 @@ img {
     background-position: center;
     min-height: auto;
     height: 500px;
-    background-color: goldenrod;
+    background-color: darkred;
     padding-top: 45px;
     overflow: hidden;
-    background-size: 1000px;
+    background-size: 1050px;
 }
 
 #contents div.area:after {
@@ -190,7 +190,7 @@ img {
 
 #content {
     min-height: auto;
-    height: 500px;
+    height: 600px;
     background-color: black;
     padding-top: 45px;
     overflow: hidden;
