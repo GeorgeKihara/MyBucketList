@@ -16,6 +16,11 @@ body #ent{
     left: 8%;
     text-align: left;
 }
+body #indexDiv{
+    position: relative;
+    left: 25%;
+    top:10%;
+}
 
 #book {
     -webkit-transform: rotate(-30deg);
