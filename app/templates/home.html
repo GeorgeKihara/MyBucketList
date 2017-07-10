@@ -1,11 +1,11 @@
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>MyBucket</title>
-    <link rel="stylesheet" href="css/styles.css" type="text/css">
-    <link rel="stylesheet" href="css/my.css" type="text/css">
+    <link rel="shortcut icon" href="{{url_for('static', filename='images/lava.jpg')}}" >
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/my.css') }}" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 </head>
 
@@ -15,11 +15,11 @@
     <div style="background:floralwhite;" id="header">
         <div class="area">
             <div>
-                <a href="index.html" target>
-                    <img id="book" src="images/book.jpeg">
+               <a href="index.html" target>
+                    <img id="book" src="{{ url_for('static',filename='images/book.jpeg')}}">
                 </a>
                 <a href="index.html" target>
-                    <img id="book1" src="images/book.jpeg">
+                    <img id="book1" src="{{ url_for('static', filename='images/book.jpeg')}}">
                 </a>
             </div>
             <div id="title">
@@ -52,43 +52,43 @@
             </header>
             <div id="scroll">
                 <div id="one">
-                    <label>1.{{one}}</label>
+                    <label>1.{{ '{{one}}' }}</label>
                 </div>
                 <p><button ng-click="edit1()" id="edit"></button> <button ng-click="delete1()" id="delete"></button></p>
                 <div id="two">
-                    <label>2.{{two}}</label>
+                    <label>2.{{ '{{two}}' }}</label>
                 </div>
                 <p><button ng-click="edit2()" id="edit"></button> <button ng-click="delete2()" id="delete"></button></p>
                 <div id="three">
-                    <label>3.{{three}}</label>
+                    <label>3.{{ '{{three}}' }}</label>
                 </div>
                 <p><button ng-click="edit3()" id="edit"></button> <button ng-click="delete3()" id="delete"></button></p>
                 <div id="four">
-                    <label>4.{{four}}</label>
+                    <label>4.{{ '{{four}}' }}</label>
                 </div>
                 <p><button ng-click="edit4()" id="edit"></button> <button ng-click="delete4()" id="delete"></button></p>
                 <div id="five">
-                    <label>5.{{five}}</label>
+                    <label>5.{{ '{{five}}' }}</label>
                 </div>
                 <p><button ng-click="edit5()" id="edit"></button> <button ng-click="delete5()" id="delete"></button></p>
                 <div id="six">
-                    <label>6.{{six}}</label>
+                    <label>6.{{ '{{six}}' }}</label>
                 </div>
                 <p><button ng-click="edit6()" id="edit"></button> <button ng-click="delete6()" id="delete"></button></p>
                 <div id="seven">
-                    <label>7.{{seven}}</label>
+                    <label>7.{{ '{{seven}}' }}</label>
                 </div>
                 <p><button ng-click="edit7()" id="edit"></button> <button ng-click="delete7()" id="delete"></button></p>
                 <div id="eight">
-                    <label>8.{{eight}}</label>
+                    <label>8.{{ '{{eight}}' }}</label>
                 </div>
                 <p><button ng-click="edit8()" id="edit"></button> <button ng-click="delete8()" id="delete"></button></p>
                 <div id="nine">
-                    <label>9.{{nine}}</label>
+                    <label>9.{{ '{{nine}}' }}</label>
                 </div>
                 <p><button ng-click="edit9()" id="edit"></button> <button ng-click="delete9()" id="delete"></button></p>
                 <div id="ten">
-                    <label>10.{{ten}}</label>
+                    <label>10.{{ '{{ten}}' }}</label>
                 </div>
                 <p><button ng-click="edit10()" id="edit"></button> <button ng-click="delete10()" id="delete"></button></p>
             </div>
@@ -98,19 +98,21 @@
         <span class="divider"></span>
         <div class="area">
             <div id="connect">
-                <a href="" target="_blank" class="googleplus"></a>
+                <a href="gegohcomp@gmail.com" target="_blank" class="googleplus"></a>
                 <a href="" target="_blank" class="mail"></a>
-                <a href="" target="_blank" class="facebook"></a>
-                <a href="" target="_blank" class="twitter"></a>
+                <a href="www.facebook.com/georgiegegoh" target="_blank" class="facebook"></a>
+                <a href="www.twitter.com/georgiegegoh" target="_blank" class="twitter"></a>
             </div>
             <p id="copyright">
                 © 2017 MyBucket List. All Rights Reserved.
-                <br> Proudly powered by <a href="http://tuklab.tk" target="_blank">TUKLAB.</a>.
+                <br> Proudly powered by <a href="http://tuklab.tk" target="_blank">TUKLAB.</a>
             </p>
         </div>
     </div>
-    <script src="js/vanilla.js"></script>
-    <script src="js/angular.js"></script>
+    <script src="{{ url_for('static', filename='js/vanilla.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/angular.js') }}"></script>
+    <script src="path/to/vanilla.js"></script>
+    
 </body>
 
 </html>
