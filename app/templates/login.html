@@ -10,7 +10,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 </head>
 
-<body>
+<body ng-app="valApp" ng-controller="form1Ctrl">
 
     <div style="background:floralwhite;" id="header">
         <div class="area">
@@ -43,16 +43,16 @@
 
     <div id="contents">
         <!-- the Sign in and register forms -->
-        <div ng-app="validationApp" id="signIn" class="form">
+        <div  id="signIn" class="form">
             <img src="{{ url_for('static', filename='images/smiling.png') }}" />
-            <form name="bucket" ng-submit="submitForm()" action="home.html" ng-controller="formCtrl" method="post">
+            <form name="bucket" action="home.html" method="post">
                 <div class="form-input">
                     <b>Username: </b><input type="text" ng-minlength="5" ng-maxlength="10" name="username" placeholder="e.g. georgie" ng-model="usr" required/>
                 </div>
                 <div class="form-input">
                     <b>Password: </b><input type="password" ng-minlength="5" ng-maxlength="10" name="passwd" placeholder="*******" ng-model="passwd" required/>
                 </div>
-                <input type="submit" name="submit" value="SIGN IN" class="btn-sign">
+                <input type="submit" ng-click="submitForm1()" name="submit" value="SIGN IN" class="btn-sign">
                 <p></p>
                 <a href=""><u>Forgot password?</u></a>
                 <a href="register.html"><u>Create an account?</u></a>

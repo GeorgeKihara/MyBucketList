@@ -13,8 +13,14 @@ body #ent{
     font-family: arial;
     font-size: 20px;
     top: 15%;
-    left: 8%;
+    left: 9%;
     text-align: left;
+}
+#welcome #welcome1{
+    position: relative;
+    color: darkmagenta;
+    font-family: Cambria;
+    font-size: 22px;
 }
 body #indexDiv{
     position: relative;
