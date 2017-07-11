@@ -1,7 +1,6 @@
 var valApp = angular.module('valApp', []);
 valApp.controller('form1Ctrl', function($scope) {
 	$scope.submitForm1 = function() {
-		alert('username saved');
 		localStorage.username = $scope.usr;
 	};
 });
@@ -12,11 +11,6 @@ homeApp.controller('goalCtrl', function($scope) {
 	//appending username
 	$scope.homeName = function() {
 		$scope.user = localStorage.username;
-		localStorage.e1 = $scope.one; 
-		$scope.one = localStorage.e1;
-		if ($scope.one == null){
-			$scope.one = null;
-		}
 	};
 	//adding items to the list
 	$scope.submitForm = function() {
@@ -27,7 +21,9 @@ homeApp.controller('goalCtrl', function($scope) {
 				localStorage.e1 = $scope.one;
 				$scope.one = localStorage.e1;
 				$scope.list = null;
-				return true;
+				localStorage.e1 = $scope.one;
+				s$scope.one = localStorage.e1;
+				return false;
 			}
 			if ($scope.two == null) {
 				alert('Congrats, Item two has been updated');
