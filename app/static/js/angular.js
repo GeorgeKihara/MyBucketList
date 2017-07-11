@@ -1,15 +1,33 @@
-var homeApp = angular.module('homeApp', []);
+var valApp = angular.module('valApp', []);
+valApp.controller('form1Ctrl', function($scope) {
+	$scope.submitForm1 = function() {
+		alert('username saved');
+		localStorage.username = $scope.usr;
+	};
+});
 
+var homeApp = angular.module('homeApp', []);
 // create angular controller
 homeApp.controller('goalCtrl', function($scope) {
+	//appending username
+	$scope.homeName = function() {
+		$scope.user = localStorage.username;
+		localStorage.e1 = $scope.one; 
+		$scope.one = localStorage.e1;
+		if ($scope.one == null){
+			$scope.one = null;
+		}
+	};
 	//adding items to the list
 	$scope.submitForm = function() {
 		if ($scope.list != null) {
 			if ($scope.one == null) {
 				alert('Congrats, Item one has been updated');
 				$scope.one = $scope.list;
+				localStorage.e1 = $scope.one;
+				$scope.one = localStorage.e1;
 				$scope.list = null;
-				return false;
+				return true;
 			}
 			if ($scope.two == null) {
 				alert('Congrats, Item two has been updated');
@@ -149,56 +167,56 @@ homeApp.controller('goalCtrl', function($scope) {
 	};
 	$scope.delete2 = function() {
 		if ($scope.two != null) {
-		$scope.two = null;
-		alert('Item two has been deleted');
+			$scope.two = null;
+			alert('Item two has been deleted');
 		}
 	};
 	$scope.delete3 = function() {
 		if ($scope.three != null) {
-		$scope.three = null;
-		alert('Item three has been deleted');
+			$scope.three = null;
+			alert('Item three has been deleted');
 		}
 	};
 	$scope.delete4 = function() {
 		if ($scope.four != null) {
-		$scope.four = null;
-		alert('Item four has been deleted');
+			$scope.four = null;
+			alert('Item four has been deleted');
 		}
 	};
 	$scope.delete5 = function() {
 		if ($scope.five != null) {
-		$scope.five = null;
-		alert('Item five has been deleted');
+			$scope.five = null;
+			alert('Item five has been deleted');
 		}
 	};
 	$scope.delete6 = function() {
 		if ($scope.one != null) {
-		$scope.six = null;
-		alert('Item six has been deleted');
+			$scope.six = null;
+			alert('Item six has been deleted');
 		}
 	};
 	$scope.delete7 = function() {
 		if ($scope.seven != null) {
-		$scope.seven = null;
-		alert('Item seven has been deleted');
+			$scope.seven = null;
+			alert('Item seven has been deleted');
 		}
 	};
 	$scope.delete8 = function() {
 		if ($scope.eight != null) {
-		$scope.eight = null;
-		alert('Item eight has been deleted');
+			$scope.eight = null;
+			alert('Item eight has been deleted');
 		}
 	};
 	$scope.delete9 = function() {
 		if ($scope.nine != null) {
-		$scope.nine = null;
-		alert('Item nine has been deleted');
+			$scope.nine = null;
+			alert('Item nine has been deleted');
 		}
 	};
 	$scope.delete10 = function() {
 		if ($scope.ten != null) {
-		$scope.ten = null;
-		alert('Item ten has been deleted');
+			$scope.ten = null;
+			alert('Item ten has been deleted');
 		}
 	};
 });

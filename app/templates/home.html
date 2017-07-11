@@ -10,7 +10,7 @@
 </head>
 
 <body ng-app="homeApp" ng-controller="goalCtrl">
-    <p id="welcome">Welcome {{usr}} to your bucket list.</p>
+    <p ng-open="homeName()" id="welcome">Welcome <b id="welcome1"><u>{{ '{{user}}' }}</u></b> to your bucket list.</p>
 
     <div style="background:floralwhite;" id="header">
         <div class="area">
